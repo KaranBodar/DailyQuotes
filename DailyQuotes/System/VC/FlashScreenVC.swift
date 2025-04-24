@@ -13,8 +13,8 @@ class FlashScreenVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "ViewController")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "ViewController")
             self.navigationController?.pushViewController(vc, animated: true)
             
         }

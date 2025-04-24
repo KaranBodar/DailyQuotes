@@ -43,12 +43,19 @@ class ViewController: UIViewController {
      
         print(self.quoteLabel)
     }
-    @IBAction func saveQuote(_ sender: UIButton){
-        if let quoteText = quoteLabel.text, let authorText = authorLabel.text {
-            var quote = self.quoteLabel.text ?? ""
-            var auther = self.authorLabel.text ?? ""
-            DataModel.shared.setUserData(content: quote, auther: auther)
+    @IBAction func saveQuote(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Success", message: "Quote saved successfully", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .cancel) { (_) in
+            if let quoteText = self.quoteLabel.text, let authorText = self.authorLabel.text {
+                var quote = self.quoteLabel.text ?? ""
+                var auther = self.authorLabel.text ?? ""
+                DataModel.shared.setUserData(content: quote, auther: auther)
+            }
         }
+        let cancle = UIAlertAction(title: "Cancle", style: .destructive)
+        alert.addAction(ok)
+        alert.addAction(cancle)
+        self.present(alert, animated: true)
         
     }
     @IBAction func viewFavorites(_ sender: UIButton){
@@ -67,10 +74,10 @@ class ViewController: UIViewController {
                             for i in jsonData {
                                 if let jsonDic = i as? NSDictionary{
                                     let apiQuote = APIQuote(dic: jsonDic)
-                                    UIView.transition(with: self.quoteLabel, duration: 0.4, options: .transitionCrossDissolve, animations: {
+                                    UIView.transition(with: self.quoteLabel, duration: 0.3, options: .transitionCrossDissolve, animations: {
                                             self.quoteLabel.text = "“\(apiQuote.quote)”"
                                         }, completion: nil)
-                                    UIView.transition(with: self.authorLabel, duration: 0.4, options: .transitionCrossDissolve, animations: {
+                                    UIView.transition(with: self.authorLabel, duration: 0.3, options: .transitionCrossDissolve, animations: {
                                         self.authorLabel.text = "- \(apiQuote.author)"
                                     }, completion: nil)
                                     print(jsonDic)
