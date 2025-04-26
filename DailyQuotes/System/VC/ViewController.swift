@@ -44,7 +44,7 @@ class ViewController: UIViewController {
         print(self.quoteLabel)
     }
     @IBAction func saveQuote(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Success", message: "Quote saved successfully", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Are you sure you want to save this quote?", message: "", preferredStyle: .alert)
         let ok = UIAlertAction(title: "OK", style: .cancel) { (_) in
             if let quoteText = self.quoteLabel.text, let authorText = self.authorLabel.text {
                 var quote = self.quoteLabel.text ?? ""
