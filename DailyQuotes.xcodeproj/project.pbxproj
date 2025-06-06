@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		16A87CD2D48237C5A1795830 /* Pods_DailyQuotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E09DED805BB88F7E5CC301 /* Pods_DailyQuotes.framework */; };
 		231547BDC700954F7953BD4F /* Pods_DailyQuotes_DailyQuotesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 932FC844460623F1CD7304C1 /* Pods_DailyQuotes_DailyQuotesUITests.framework */; };
+		2511F1A22DF2CCAB0039B201 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2511F1A12DF2CCAB0039B201 /* SettingsVC.swift */; };
 		254A47C62DB9E398004CF60F /* FavouriteQuoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254A47C42DB9E398004CF60F /* FavouriteQuoteCell.swift */; };
 		254A47C72DB9E398004CF60F /* FavouriteQuoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 254A47C52DB9E398004CF60F /* FavouriteQuoteCell.xib */; };
 		254A47C92DB9E47E004CF60F /* FavouriteQuoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254A47C82DB9E47E004CF60F /* FavouriteQuoteVC.swift */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		0D32EC674C79A0B37D967BF7 /* Pods_DailyQuotesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyQuotesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2511F1A12DF2CCAB0039B201 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		254A47C42DB9E398004CF60F /* FavouriteQuoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteQuoteCell.swift; sourceTree = "<group>"; };
 		254A47C52DB9E398004CF60F /* FavouriteQuoteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouriteQuoteCell.xib; sourceTree = "<group>"; };
 		254A47C82DB9E47E004CF60F /* FavouriteQuoteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteQuoteVC.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				254A47CD2DB9F266004CF60F /* DataModel.swift */,
 				25FA03822DB9D28A00753BF6 /* ViewController.swift */,
 				254A47C42DB9E398004CF60F /* FavouriteQuoteCell.swift */,
+				2511F1A12DF2CCAB0039B201 /* SettingsVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -470,6 +473,7 @@
 				25FA038A2DB9D28A00753BF6 /* DailyQuotes.xcdatamodeld in Sources */,
 				25FA038B2DB9D28A00753BF6 /* SceneDelegate.swift in Sources */,
 				25FA038C2DB9D28A00753BF6 /* ViewController.swift in Sources */,
+				2511F1A22DF2CCAB0039B201 /* SettingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

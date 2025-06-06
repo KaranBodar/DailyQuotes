@@ -38,6 +38,11 @@ class ViewController: UIViewController {
     
     
     // MARK: - IBAction -
+    
+    @IBAction func clickSettings(_ sender: UIButton) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "SettingsVC")
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     @IBAction func newQuote(_ sender: UIButton){
         self.fetchQuote()
      
